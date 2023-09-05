@@ -1,0 +1,109 @@
+﻿@model PatronesDeSeguridad.Models.tblMateriaCursoUsuario
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Your Application Name</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-pzjw5f+ua8m+6zR5OTw8G1LvHz4l5vH" crossorigin="anonymous">
+    <style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .details-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .details-list {
+            margin-bottom: 20px;
+        }
+
+        .details-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="details-container">
+            <h1>Detalles</h1>
+
+            <div>
+                <h4>Asignación</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.identificadorAsignacion)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.identificadorAsignacion)
+                    </dd>
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.Profesor)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Profesor.IdentificationNumber)
+                    </dd>
+                    <!---->
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.Curso)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Curso.nombreCurso)
+                    </dd>
+                    <!---->
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.Curso.Level)
+                    </dt>
+
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Curso.Level.nombreNivel)
+                    </dd>
+
+                    <!---->
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.Materia)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Materia.nombreMateria)
+                    </dd>
+                    <!---->
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.Materia.descripcionMateria)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Materia.descripcionMateria)
+                    </dd>
+                    <!---->
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.EstadoAsignacion)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.EstadoAsignacion)
+                    </dd>
+                </dl>
+            </div>
+
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.idMateriaCursoUsuario" class="btn btn-success">Editar</a> |
+                <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

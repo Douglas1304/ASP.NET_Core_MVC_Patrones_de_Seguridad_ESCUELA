@@ -1,0 +1,78 @@
+﻿@model PatronesDeSeguridad.Models.Prueba
+@{
+    ViewData["Title"] = "AsignarRolUser";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Your Application Name</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-pzjw5f+ua8m+6zR5OTw8G1LvHz4l5vH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .create-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            color: black;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group button {
+            color: black;
+            background-color: transparent;
+            border: 1px solid black;
+        }
+
+            .form-group input::placeholder,
+            .form-group select option {
+                color: black;
+            }
+
+            .form-group button:hover {
+                background-color: #67b588;
+                color: black;
+            }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="create-container">
+            <h1 class="text-black">Asignar Rol al usuario</h1>
+            <section>
+                <form asp-controller="Admin" asp-action="PonerRol" method="post">
+                    <div class="form-group">
+                        <input class="bg-transparent form-control" asp-for="UserId" value="@ViewBag.id" />
+                        <select asp-for="RoleName" id="Role" class="bg-transparent form-control mt-3">
+                            @foreach (var rol in ViewBag.rol)
+                            {
+                                <option value="@rol.Name">@rol.Name</option>
+                            }
+                        </select>
+                        <button type="submit" class="w-100 btn btn-lg bg-gradient mt-3">Agregar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    // Aquí puedes agregar scripts si es necesario
+}

@@ -1,0 +1,32 @@
+﻿@{
+
+    Layout = "/Views/Shared/_Layout.cshtml";
+
+}
+<div class="row justify-content-center">
+    <div class="col-5 mt-5">
+        <div class="card login-logout-card bg-gradient" style="background-color:#141325">
+            <div class="card-header " style="b">
+                <ul class="nav nav-tabs card-header-tabs justify-content-center ">
+                    <li class="nav-item">
+                        <a style="color:#2F97C1; font-weight:bold" class="nav-link" href="/Identity/Account/Login">Iniciar Sesion</a>
+                    </li>
+                  
+                </ul>
+            </div>
+            <div class="card-body" style="background-color:#141325">
+                <div class="row justify-content-center">
+                    <div class="col-10 my-4">
+                        @RenderBody();
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @await RenderSectionAsync("Scripts", required: false)
+}
+

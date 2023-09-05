@@ -1,0 +1,216 @@
+﻿@model PatronesDeSeguridad.Models.tblMatriculaEstudiante
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ImprimirCita</title>
+    <style>
+        .contenedor {
+            width: 900px !important;
+            height: 842px !important;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #03A99F;
+        }
+
+        h4 {
+            color: #03A99F;
+            margin-bottom: 10px;
+        }
+
+        .table-container {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        .details-label {
+            font-weight: bold;
+        }
+
+        .details-value {
+            background-color: #F4F4F4;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        /* ... (otros estilos) ... */
+
+        .table-row {
+            display: table-row;
+            border: 1px solid #ccc; /* Add border for each row */
+        }
+
+        .table-cell {
+            display: table-cell;
+            padding: 10px; /* Increased padding for better spacing */
+            vertical-align: middle; /* Center content vertically */
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <img src="~/imagenes/OIP.jpg" style="width: 250px; margin-left:50px" />
+                </td>
+                <td style="text-align:left">
+                    <table style="margin-left:250px">
+                        <tr>
+                            <td>
+                                <p class="title text-center"><h2>Escuela Sor María Romero</h2></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="text text-center">Direccion: De la UNED 500mts noroeste.</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="text text-center">Correo: escsormaria@correo.com</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="text text-center">Telefono: 2470-0000</p>
+                            </td>
+                        </tr>
+
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+
+        <div class="details-container">
+            <h1>Reporte Calificación</h1>
+            <br />
+          
+            <div>
+                @{
+                    if (Model.Calificacion < 60)
+                    {
+                        <span style="color: red; border: 1px solid red; padding: 5px; border-radius: 5px;">Reprobado</span>
+                    }
+                    else if (Model.Calificacion >= 60 && Model.Calificacion <= 69.5)
+                    {
+                        <span style="color: orange; border: 1px solid orange; padding: 5px; border-radius: 5px;">Ampliación</span>
+                    }
+                    else
+                    {
+                        <span style="color: green; border: 1px solid green; padding: 5px; border-radius: 5px;">Aprobado</span>
+                    }
+                }
+
+            </div>
+            <h4>Detalles</h4>
+            <hr />
+            <br />
+            <div class="table-container">
+                <div class="table-row">
+                    <div class="table-cell details-label">Estudiante:</div>
+                    <div class="table-cell details-value">
+                        @Html.DisplayFor(model => model.Estudiante.FirstName) @Html.DisplayFor(model => model.Estudiante.LastName1) @Html.DisplayFor(model => model.Estudiante.LastName2)
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Asignacion)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Asignacion.identificadorAsignacion)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Asignacion.Profesor)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Asignacion.Profesor.FirstName) @Html.DisplayFor(model => model.Asignacion.Profesor.LastName1) @Html.DisplayFor(model => model.Asignacion.Profesor.LastName2) </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Asignacion.Curso)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Asignacion.Curso.nombreCurso)  </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Asignacion.Curso.Level)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Asignacion.Curso.Level.nombreNivel)  </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Asignacion.Materia)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Asignacion.Materia.nombreMateria)  </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Asignacion.Materia.descripcionMateria)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Asignacion.Materia.descripcionMateria)  </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.FechaCalificacion)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.FechaCalificacion)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.EstadoMatricula)</div>
+                    <div class="table-cell details-value">
+                        @if (Model.EstadoMatricula == true)
+                        {
+                            <span>activo</span>
+                        }
+                        else
+                        {
+                            <span>inactivo</span>
+                        }
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">@Html.DisplayNameFor(model => model.Calificacion)</div>
+                    <div class="table-cell details-value">@Html.DisplayFor(model => model.Calificacion)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell details-label">Estado Estudiante</div>
+                    <div class="table-cell details-value">
+                        @{
+                            if (Model.Calificacion < 60)
+                            {
+                                <span style="color: red;">Reprobado</span>
+                            }
+                            else if (Model.Calificacion >= 60 && Model.Calificacion <= 69.5)
+                            {
+                                <span style="color: orange;">Ampliación</span>
+                            }
+                            else
+                            {
+                                <span style="color: green;">Aprobado</span>
+                            }
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+            <br />
+        </div>
+    </div>
+
+</body>
+</html>

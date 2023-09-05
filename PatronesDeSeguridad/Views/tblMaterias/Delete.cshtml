@@ -1,0 +1,72 @@
+﻿@model PatronesDeSeguridad.Models.tblMateria
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .delete-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+            .delete-container h1 {
+                margin-bottom: 10px;
+            }
+
+            .delete-container h3 {
+                margin-bottom: 20px;
+            }
+
+            .delete-container form {
+                margin-top: 20px;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="delete-container">
+        <h1>Activar</h1>
+        <h3>Seguro que quieres activar?</h3>
+        <div>
+            <h4>Materia</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-6">
+                    @Html.DisplayNameFor(model => model.nombreMateria)
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model => model.nombreMateria)
+                </dd>
+                <dt class="col-sm-6">
+                    @Html.DisplayNameFor(model => model.descripcionMateria)
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model => model.descripcionMateria)
+                </dd>
+                <dt class="col-sm-6">
+                    @Html.DisplayNameFor(model => model.EstadoMateria)
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model => model.EstadoMateria)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="idMateria" />
+                <input type="submit" value="Activar" class="btn btn-danger" /> |
+                <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

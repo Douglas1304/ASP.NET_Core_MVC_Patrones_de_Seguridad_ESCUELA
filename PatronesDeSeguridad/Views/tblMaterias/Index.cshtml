@@ -1,0 +1,153 @@
+﻿@model IEnumerable<PatronesDeSeguridad.Models.tblMateria>
+
+@{
+    ViewData["Title"] = "Materias Activas";
+}
+
+<h2 class="text-center text-light">@ViewData["Title"]</h2>
+
+@if (User.IsInRole("Administrador"))
+{
+    <div class="row">
+        <div class="offset-9 col-3 d-flex justify-content-between mb-3">
+            <a asp-action="Create" class="btn btn-success btn-lg" style="width: 48%;">
+                <i class="bi bi-book-half"></i> Nueva Materia
+            </a>
+            <a class="btn btn-danger btn-lg" asp-area="" asp-controller="tblMaterias" asp-action="Inactivos" style="width: 48%;">
+                <i class="bi bi-list-ul"></i> Lista Inactivos
+            </a>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="offset-12">
+        <div>
+            <div class="card-header estilos">
+                <h4 class="text-white"><strong>Lista de Materias activas</strong></h4>
+            </div>
+            <div class="card-body cuerpoTabla">
+                <div class="table-responsive">
+                    @if (Model.Count() > 0)
+                    {
+                        <table class="table table-bordered" id="buscadorJS" width="100%" cellpadding="0">
+                            <thead class="text-white">
+                                <tr>
+                                    <th class="text-center">
+                                        @Html.DisplayNameFor(model => model.nombreMateria)
+                                    </th>
+                                    <th class="text-center">
+                                        @Html.DisplayNameFor(model => model.descripcionMateria)
+                                    </th>
+                                    <th class="text-center">
+                                        @Html.DisplayNameFor(model => model.EstadoMateria)
+                                    </th>
+                                    @if (User.IsInRole("Administrador"))
+                                    {
+                                        <th class="text-center">Gestión</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-center">
+                                            @Html.DisplayFor(modelItem => item.nombreMateria)
+                                        </td>
+                                        <td class="text-center">
+                                            @Html.DisplayFor(modelItem => item.descripcionMateria)
+                                        </td>
+                                        <td class="text-center">
+                                            @if (item.EstadoMateria)
+                                            {
+                                                <span class="badge badge-success">Activo</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-danger">Inactivo</span>
+                                            }
+                                        </td>
+                                        @if (User.IsInRole("Administrador"))
+                                        {
+                                            <td class="text-center">
+                                                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.idMateria"><i class="bi-pencil-fill"></i> </a>
+                                                <a class="btn btn-outline-secondary" asp-action="Details" asp-route-id="@item.idMateria"><i class="bi-info-circle-fill"></i> </a>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="text-danger">No hay registros</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .dataTables_wrapper .dataTables_info {
+        color: white;
+    }
+
+    .estilos {
+        background-color: #297373;
+    }
+
+    .cuerpoTabla {
+        background-color: #253237;
+    }
+
+    .dataTables_length select {
+        background-color: #297373;
+        color: white;
+    }
+
+    .dataTables_length label {
+        color: white;
+    }
+
+    .dataTables_filter input[type="search"] {
+        background-color: #CAD8DE;
+        color: black;
+    }
+
+    .dataTables_filter label {
+        color: white;
+    }
+</style>
+
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Llamar a datatable
+            $('#buscadorJS').DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+            });
+        });
+    </script>
+}

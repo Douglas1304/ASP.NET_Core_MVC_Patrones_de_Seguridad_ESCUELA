@@ -1,0 +1,33 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "/Areas/Identity/Pages/_AuthLayout.cshtml";
+}
+
+<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <h2 style="color:#2F97C1">Registrar Usuario</h2>
+    <hr />
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+    <div class="form-floating mb-3">
+        <input asp-for="Input.Email" class="form-control bg-transparent border-0 border-bottom" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+        <label style="color:#2F97C1" asp-for="Input.Email">Email</label>
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Input.Password" class="form-control bg-transparent border-0 border-bottom" autocomplete="new-password" aria-required="true" placeholder="password" />
+        <label style="color:#2F97C1" asp-for="Input.Password">Contraseña</label>
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Input.ConfirmPassword" class="form-control bg-transparent border-0 border-bottom" autocomplete="new-password" aria-required="true" placeholder="password" />
+        <label style="color:#2F97C1" asp-for="Input.ConfirmPassword">Confirmar Contraseña</label>
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+    </div>
+    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg bg-gradient" style="color:#2F97C1">Registrar</button>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

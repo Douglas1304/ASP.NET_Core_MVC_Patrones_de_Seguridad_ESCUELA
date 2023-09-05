@@ -1,0 +1,153 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore;
+@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "Lista de roles";
+}
+<h2 class="text-center text-light">@ViewData["Title"]</h2>
+@*<div class="row">
+    <div class="col-2">
+        <a class="w-100 btn btn-lg bg-gradient" style="color:#67b588" asp-action="Create"> Nuevo Rol</a>
+
+    </div>
+    <div class="col-2">
+
+        <a class="w-100 btn btn-lg bg-gradient" style="color:#67b588" asp-action="AsignarRol"> Usuarios</a>
+
+    </div>
+    <div class="col-3">
+
+        <a class="w-100 btn btn-lg bg-gradient" style="color:#67b588" asp-area="Identity" asp-page="/Account/Register">Usuario Nuevo </a>
+    </div>
+</div*@>
+
+<div class="row">
+    <div class="offset-lg-9 col-3 mb-3 d-flex justify-content-end">
+        <a class="btn btn-success btn-lg ml-2" asp-action="Create">
+            <i class="bi bi-shield-plus"></i> Nuevo Rol
+        </a>
+
+        <a class="btn btn-secondary btn-lg ml-2" asp-action="AsignarRol">
+            <i class="bi bi-person-check"></i>  Asignar Rol
+        </a>
+
+        <a class="btn btn-success btn-lg ml-2" asp-area="Identity" asp-page="/Account/Register">
+            <i class="bi bi-person-plus"></i> Nuevo Usuario
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="offset-12">
+        <div>
+            <div class="card-header estilos">
+                <h4 class="text-white"><strong>Lista de Roles</strong></h4>
+            </div>
+            <div class="card-body cuerpoTabla">
+                <div class="table-responsive">
+                    @if (Model.Count() > 0)
+                    {
+                        <table class="table table-bordered" id="buscadorJS" width="100%" cellpadding="0">
+                            <thead class="text-white">
+                                <tr>
+                                    <th class="text-center">
+                                        @Html.DisplayNameFor(x=>x.Id)     
+                                    </th>
+                                    <th class="text-center">
+                                        @Html.DisplayNameFor(Model=>Model.Name)     
+                                    </th>
+                                    <th class="text-center">
+                                        @Html.DisplayNameFor(Model=>Model.NormalizedName)   
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {         
+                                    <tr>
+                                        <td class="text-center">
+                                            @Html.DisplayFor(x=>item.Id)         
+                                        </td>
+                                        <td class="text-center">
+                                            @Html.DisplayFor(x=>item.Name)       
+                                        </td>
+                                        <td class="text-center">
+                                            @Html.DisplayFor(x=>item.NormalizedName)     
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="text-danger">No hay registros</p>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .dataTables_wrapper .dataTables_info {
+        color: white;
+    }
+
+    .estilos {
+        background-color: #297373;
+    }
+
+    .cuerpoTabla {
+        background-color: #253237;
+    }
+
+    .dataTables_length select {
+        background-color: #297373;
+        color: white;
+    }
+
+    .dataTables_length label {
+        color: white;
+    }
+
+    .dataTables_filter input[type="search"] {
+        background-color: #CAD8DE;
+        color: black;
+    }
+
+    .dataTables_filter label {
+        color: white;
+    }
+</style>
+
+@section Scripts{
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                //Llamar a datatable
+                $('#buscadorJS').DataTable({
+                    language: {
+                        "decimal": "",
+                        "emptyTable": "No hay información",
+                        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                        "infoPostFix": "",
+                        "thousands": ",",
+                        "lengthMenu": "Mostrar _MENU_ Entradas",
+                        "loadingRecords": "Cargando...",
+                        "processing": "Procesando...",
+                        "search": "Buscar:",
+                        "zeroRecords": "Sin resultados encontrados",
+                        "paginate": {
+                            "first": "Primero",
+                            "last": "Ultimo",
+                            "next": "Siguiente",
+                            "previous": "Anterior"
+                        }
+                    }
+                });
+            });
+        </script>
+}

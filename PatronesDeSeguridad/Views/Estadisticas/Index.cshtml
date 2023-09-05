@@ -1,0 +1,116 @@
+﻿@model EstadisticasViewModel
+<style>
+    .medal {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        margin-right: 5px;
+    }
+
+    .gold {
+        background-color: gold;
+    }
+
+    .silver {
+        background-color: silver;
+    }
+
+    .bronze {
+        background-color: #cd7f32;
+    }
+</style>
+<style>
+    .dataTables_wrapper .dataTables_info {
+        color: white;
+    }
+
+    .estilos {
+        background-color: #297373;
+    }
+
+    .cuerpoTabla {
+        background-color: #253237;
+    }
+
+    .dataTables_length select {
+        background-color: #297373;
+        color: white;
+    }
+
+    .dataTables_length label {
+        color: white;
+    }
+
+    .dataTables_filter input[type="search"] {
+        background-color: #CAD8DE;
+        color: black;
+    }
+
+    .dataTables_filter label {
+        color: white;
+    }
+</style>
+
+<h2 class="text-center text-light">Estadísticas de los mejores estudiantes</h2>
+<div class="card-body cuerpoTabla">
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</div>
+
+<div class="card-body cuerpoTabla">
+    <table class="table table-bordered" width="100%" cellpadding="0">
+        <thead class="text-white">
+            <tr>
+                <th class="text-center">Puesto</th>
+                <th class="text-center">Nombre Estudiante</th>
+                <th class="text-center">Calificación Promedio</th>
+                <th class="text-center">Matrículas con Calificación</th>
+            </tr>
+        </thead>
+        <tbody class="bg-light">
+            @for (var i = 0; i < Model.TopEstudiantes.Count; i++)
+            {
+                <tr>
+                    <td class="text-center">
+                        @if (i == 0)
+                        {
+                            <div class="medal gold"><i class="fas fa-trophy"></i></div>
+                        }
+                        else if (i == 1)
+                        {
+                            <div class="medal silver"><i class="fas fa-medal"></i></div>
+                        }
+                        else if (i == 2)
+                        {
+                            <div class="medal bronze"><i class="fas fa-award"></i></div>
+                        }
+                    </td>
+                    <td class="text-center">@Model.TopEstudiantes[i].NombreEstudiante</td>
+                    <td class="text-center">@Model.TopEstudiantes[i].CalificacionPromedio</td>
+                    <td class="text-center">@Model.TopEstudiantes[i].MatriculasConCalificacionMayorACero</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "Top 3 Estudiantes"
+                },
+                data: [{
+                    type: "column",
+                    dataPoints: @Html.Raw(Json.Serialize(Model.TopEstudiantes.Select(e => new { label = e.NombreEstudiante, y = e.CalificacionPromedio })))
+                        }]
+            });
+            chart.render();
+        }
+    </script>
+}

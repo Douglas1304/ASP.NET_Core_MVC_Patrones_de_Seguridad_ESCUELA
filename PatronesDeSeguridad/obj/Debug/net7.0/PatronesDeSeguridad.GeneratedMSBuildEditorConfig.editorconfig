@@ -1,0 +1,265 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PatronesDeSeguridad
+build_property.RootNamespace = PatronesDeSeguridad
+build_property.ProjectDir = C:\Users\dougl\Downloads\ESCPat.SegDouglas\DouglasEscSeguridad\PatronesDeSeguridad\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\dougl\Downloads\ESCPat.SegDouglas\DouglasEscSeguridad\PatronesDeSeguridad
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Admin/AsignarRol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXNpZ25hclJvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Admin/AsignarRolUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXNpZ25hclJvbFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Admin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Estadisticas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRpc3RpY2FzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Home/Compras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wcmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Home/Empleados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbXBsZWFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Home/Ventas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZW50YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblCursos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsQ3Vyc29zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblCursos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsQ3Vyc29zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblCursos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsQ3Vyc29zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblCursos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsQ3Vyc29zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblCursos/Inactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsQ3Vyc29zXEluYWN0aXZvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblCursos/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsQ3Vyc29zXEluZGV4MS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblEstudiantes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsRXN0dWRpYW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblEstudiantes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsRXN0dWRpYW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblEstudiantes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsRXN0dWRpYW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblEstudiantes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsRXN0dWRpYW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblEstudiantes/Inactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsRXN0dWRpYW50ZXNcSW5hY3Rpdm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblEstudiantes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsRXN0dWRpYW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMateriaCursoUsuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYUN1cnNvVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMateriaCursoUsuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYUN1cnNvVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMateriaCursoUsuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYUN1cnNvVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMateriaCursoUsuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYUN1cnNvVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMateriaCursoUsuarios/Inactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYUN1cnNvVXN1YXJpb3NcSW5hY3Rpdm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMateriaCursoUsuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYUN1cnNvVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMaterias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMaterias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMaterias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMaterias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMaterias/Inactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYXNcSW5hY3Rpdm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMaterias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0ZXJpYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/ImprimirCalificion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcSW1wcmltaXJDYWxpZmljaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/ImprimirTodaslasMatriculas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcSW1wcmltaXJUb2Rhc2xhc01hdHJpY3VsYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/validarEstudiante.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcdmFsaWRhckVzdHVkaWFudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblMatriculaEstudiantes/_agregarCalificacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsTWF0cmljdWxhRXN0dWRpYW50ZXNcX2FncmVnYXJDYWxpZmljYWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblProfesores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsUHJvZmVzb3Jlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblProfesores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsUHJvZmVzb3Jlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblProfesores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsUHJvZmVzb3Jlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblProfesores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsUHJvZmVzb3Jlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblProfesores/Inactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsUHJvZmVzb3Jlc1xJbmFjdGl2b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/tblProfesores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGJsUHJvZmVzb3Jlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dougl/Downloads/ESCPat.SegDouglas/DouglasEscSeguridad/PatronesDeSeguridad/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4yan3qfmwm

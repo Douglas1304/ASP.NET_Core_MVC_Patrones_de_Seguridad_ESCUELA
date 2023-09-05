@@ -1,0 +1,99 @@
+﻿@model PatronesDeSeguridad.Models.tblEstudiante
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        }
+
+        .delete-container {
+            background-color: #fff; /* Fondo blanco para el cuadro de borrado */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="delete-container">
+            <h1>Activar</h1>
+            <h3>Seguro que quieres activar?</h3>
+            <div>
+                <h4>Estudiante</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.LastName1)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.LastName1)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.LastName2)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.LastName2)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Gender.nombreGenero)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.FechaNacimiento)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.FechaNacimiento)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Phone)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.direccion)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.direccion)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.EstadoEstudiante)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.EstadoEstudiante)
+                    </dd>
+                </dl>
+
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="IdentificationNumber" />
+                    <input type="submit" value="Activar" class="btn btn-danger" /> |
+                    <a asp-action="Inactivos" class="btn btn-primary">Volver a la lista</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@model PatronesDeSeguridad.Models.tblMatriculaEstudiante
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Your Application Name</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-pzjw5f+ua8m+6zR5OTw8G1LvHz4l5vH" crossorigin="anonymous">
+    <style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .details-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .details-list {
+            margin-bottom: 20px;
+        }
+
+        .details-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="details-container">
+            <h1>Details</h1>
+
+            <div>
+                <h4>tblMatriculaEstudiante</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2 details-label">
+                        @Html.DisplayNameFor(model => model.Estudiante)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Estudiante.IdentificationNumber)
+                    </dd>
+                    <dt class="col-sm-2 details-label">
+                        @Html.DisplayNameFor(model => model.Asignacion)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Asignacion.idMateriaCursoUsuario)
+                    </dd>
+                    <dt class="col-sm-2 details-label">
+                        @Html.DisplayNameFor(model => model.FechaMatricula)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.FechaMatricula)
+                    </dd>
+                    <dt class="col-sm-2 details-label">
+                        @Html.DisplayNameFor(model => model.EstadoMatricula)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EstadoMatricula)
+                    </dd>
+                </dl>
+            </div>
+
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.idMatriculaEstudiante" class="btn btn-success">Edit</a> |
+                <a asp-action="Index" class="btn btn-primary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

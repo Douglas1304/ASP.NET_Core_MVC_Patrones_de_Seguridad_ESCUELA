@@ -1,0 +1,140 @@
+﻿@model PatronesDeSeguridad.Models.tblMatriculaEstudiante
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Your Application Name</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-pzjw5f+ua8m+6zR5OTw8G1LvHz4l5vH" crossorigin="anonymous">
+    <style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .create-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .section-spacing {
+            margin: 30px;
+        }
+
+        /* Add any additional custom styles here */
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="create-container">
+            <h1>Crear</h1>
+            <h4>Matricula Estudiante</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="EstudianteId" class="control-label"></label>
+                            <select asp-for="EstudianteId" class="form-control" asp-items="ViewBag.EstudianteId">
+                                <option value="">Selecciona un estudiante...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AsignacionId" class="control-label"></label>
+                            <select asp-for="AsignacionId" class="form-control" asp-items="ViewBag.AsignacionId">
+                                <option value="">Selecciona una asignacion...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FechaMatricula" class="control-label"></label>
+                            <input asp-for="FechaMatricula" class="form-control" />
+                            <span asp-validation-for="FechaMatricula" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="EstadoMatricula" /> @Html.DisplayNameFor(model => model.EstadoMatricula)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Crear" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+            </div>
+        </div>
+        <div class="section-spacing"></div>
+        <div class="create-container ">
+            <h4 class="text-center">Detalles de la asignacion</h4>
+            <div class="form-group">
+                <label>Nombre Curso:</label>
+                <input type="text" id="nombreCurso" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label>Nombre Nivel:</label>
+                <input type="text" id="nombreNivel" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label>Nombre Materia:</label>
+                <input type="text" id="nombreMateria" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label>Descripción Materia:</label>
+                <input type="text" id="descripcionMateria" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label>Profesor:</label>
+                <input type="text" id="nombreProfesor" class="form-control" readonly />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $("#AsignacionId").change(function () {
+                var selectedId = $(this).val();
+                if (selectedId !== "") {
+                    $.ajax({
+                        url: '/tblMatriculaEstudiantes/LoadRelatedData', // Cambia "ControllerName" al nombre de tu controlador
+                        type: 'GET',
+                        data: { id: selectedId },
+                        success: function (result) {
+                            $("#nombreCurso").val(result.nombreCurso);
+                            $("#nombreNivel").val(result.nombreNivel);
+                            $("#nombreMateria").val(result.nombreMateria);
+                            $("#descripcionMateria").val(result.descripcionMateria);
+                            $("#nombreProfesor").val(result.nombreProfesor);
+                        }
+                    });
+                } else {
+                    $("#nombreCurso").val("");
+                    $("#nombreNivel").val("");
+                    $("#nombreMateria").val("");
+                    $("#descripcionMateria").val("");
+                    $("#nombreProfesor").val("");
+                }
+            });
+        });
+    </script>
+}

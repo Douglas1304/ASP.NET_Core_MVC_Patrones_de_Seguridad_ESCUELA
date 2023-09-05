@@ -1,0 +1,40 @@
+﻿@model PatronesDeSeguridad.Models.tblMatriculaEstudiante
+@{
+    ViewData["Title"] = "Agregar Calificacion";
+}
+<h4 class="text-center">@ViewData["Title"]</h4>
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idMatriculaEstudiante" />
+
+            <div class="form-group">
+                <label for="Token" class="control-label">Token del Profesor:</label>
+                <input id="Token" name="Token" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FechaCalificacion" class="control-label">Fecha Calificación:</label>
+                <input asp-for="FechaCalificacion" class="form-control" />
+                <span asp-validation-for="FechaCalificacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Calificacion" class="control-label">Calificación:</label>
+                <input asp-for="Calificacion" class="form-control" />
+                <span asp-validation-for="Calificacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

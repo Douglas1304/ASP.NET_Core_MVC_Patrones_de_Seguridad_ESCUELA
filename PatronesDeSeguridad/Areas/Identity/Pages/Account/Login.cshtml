@@ -1,0 +1,52 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "/Areas/Identity/Pages/_AuthLayout.cshtml";
+}
+
+
+
+<section>
+    <form id="account" method="post">
+        <div>
+            <h3 class="text-white">Escuela Sor María Romero</h3>
+            <br />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3 ">
+                <input asp-for="Input.Email" class="form-control bg-transparent text-light  border-0 border-bottom" aria-required="true" />
+                <label style="color:#2F97C1;" asp-for="Input.Email" class="form-label">Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input style="color:#2F97C1;" asp-for="Input.Password" class="form-control bg-transparent border-0 border-bottom" aria-required="true" />
+                <label style="color:#2F97C1;" asp-for="Input.Password" class="form-label">Password</label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="checkbox mb-3">
+                <label style="color:#2F97C1;" asp-for="Input.RememberMe" class="form-label">
+                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
+            </div>
+            <button id="login-submit" type="submit" class="w-100 btn btn-lg bg-gradient" style="color:#2F97C1">Iniciar Sesion</button>
+            <div class="mt-2">
+                <p>
+                    <a style="color:#2F97C1;" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                </p>
+                <p>
+                    <a style="color:#2F97C1;" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                </p>
+                <p>
+                    <a style="color:#2F97C1;" id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                </p>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,148 @@
+﻿@model PatronesDeSeguridad.Models.tblMateriaCursoUsuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Estilos de .content-wrapper y .edit-container de la primera ventana */
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .edit-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="edit-container">
+            <h1>Editar</h1>
+            <h4>Asignación</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="idMateriaCursoUsuario" />
+                        <div class="form-group">
+                            <label asp-for="identificadorAsignacion" class="control-label"></label>
+                            <input asp-for="identificadorAsignacion" class="form-control" />
+                            <span asp-validation-for="identificadorAsignacion" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ProfesorId" class="control-label"></label>
+                            <select asp-for="ProfesorId" class="form-control" asp-items="ViewBag.ProfesorId"></select>
+                            <span asp-validation-for="ProfesorId" class="text-danger"></span>
+                        </div>
+                        <!---->
+                        <div class="form-group">
+                            <label asp-for="CursoId" class="control-label"></label>
+                            <select asp-for="CursoId" class="form-control" asp-items="ViewBag.CursoId"></select>
+                            <span asp-validation-for="CursoId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="nivelCurso" class="control-label">Nivel Curso</label>
+                            <input id="nivelCurso" class="form-control" readonly>
+                        </div>
+                        <!---->
+                        <div class="form-group">
+                            <label asp-for="MateriaId" class="control-label"></label>
+                            <select asp-for="MateriaId" class="form-control" asp-items="ViewBag.MateriaId"></select>
+                            <span asp-validation-for="MateriaId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionMateria" class="control-label">Descripcion Materia</label>
+                            <textarea id="descriptionMateria" class="form-control" readonly></textarea>
+                        </div>
+                        <!---->
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="EstadoAsignacion" /> @Html.DisplayNameFor(model => model.EstadoAsignacion)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Salvar" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // Función para obtener y mostrar el Value basado en el servicio seleccionado
+        function obtenerDescripcionMaterialfunc(MateriaId) {
+            // Realizar una solicitud al servidor para obtener el Value
+            fetch(`/tblMateriaCursoUsuarios/ObtenerDescripcion?MateriaId=${MateriaId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Actualizar el campo de solo vista del Value
+                    document.getElementById("descriptionMateria").value = data.descriptionMateria;
+                })
+                .catch(error => {
+                    console.error("Error al obtener dato:", error);
+                });
+        }
+
+        // Llamar a la función al cargar el formulario
+        document.addEventListener("DOMContentLoaded", function () {
+            var selectedValue = document.getElementById("MateriaId").value;
+            obtenerDescripcionMaterialfunc(selectedValue);
+        });
+
+        // Evento de cambio en el campo de selección de servicio
+        document.getElementById("MateriaId").addEventListener("change", function () {
+            var selectedValue = this.value;
+            obtenerDescripcionMaterialfunc(selectedValue);
+        });
+    </script>
+    <script>
+        // Función para obtener y mostrar el alue basado en el servicio seleccionado
+        function obtenerNivelCursofunc(CursoId) {
+            // Realizar una solicitud al servidor para obtener el Value
+            fetch(`/tblMateriaCursoUsuarios/ObtenerNivelCurso?CursoId=${CursoId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Actualizar el campo de solo vista del Value
+                    document.getElementById("nivelCurso").value = data.nivelCurso;
+                })
+                .catch(error => {
+                    console.error("Error al obtener dato:", error);
+                });
+        }
+
+        // Llamar a la función al cargar el formulario
+        document.addEventListener("DOMContentLoaded", function () {
+            var selectedValue = document.getElementById("CursoId").value;
+            obtenerNivelCursofunc(selectedValue);
+        });
+
+        // Evento de cambio en el campo de selección de servicio
+        document.getElementById("CursoId").addEventListener("change", function () {
+            var selectedValue = this.value;
+            obtenerNivelCursofunc(selectedValue);
+        });
+    </script>
+}

@@ -1,0 +1,74 @@
+﻿@model PatronesDeSeguridad.Models.tblCurso
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .details-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .details-list {
+            margin-bottom: 20px;
+        }
+
+        .details-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="details-container">
+            <h1>Detalles</h1>
+
+            <div class="details-list">
+                <h4>Curso</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.nombreCurso)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.nombreCurso)
+                    </dd>
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.Level)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Level.nombreNivel)
+                    </dd>
+                    <dt class="col-sm-6 details-label">
+                        @Html.DisplayNameFor(model => model.EstadoCurso)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.EstadoCurso)
+                    </dd>
+                </dl>
+            </div>
+
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.idCurso" class="btn btn-success">Editar</a> |
+                <a asp-action="Index1" class="btn btn-primary">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
